@@ -1,0 +1,13 @@
+.box-area {
+    width: 930px;
+}
+.left-box {
+    background-color: #958D5F;
+}
+.right-box {
+    padding: 40px 30px 40px 40px;
+}
+.pass{
+    outline: none !important;
+    border: none !important;
+}
