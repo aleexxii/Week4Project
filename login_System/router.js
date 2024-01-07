@@ -25,7 +25,7 @@ router.get('/dashboard',(req,res) => {
     if(req.session.user){
         res.render('dashboard')
     }else {
-        res.send("unathouraized us")
+        res.send("unathouraized user")
     }
 })
 
@@ -33,7 +33,6 @@ router.get('/dashboard',(req,res) => {
 router.get('/logout',(req,res) => {
     req.session.destroy(function(err){
         if(err){
-            console.log(err);
             res.send("Error")
         }else {
             res.render('base')

@@ -18,7 +18,6 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.set('view engine','ejs')
 //load static assets
 app.use('/static',express.static(path.join(__dirname,'/public')))
-// app.use(express.static(path.join(__dirname, '/public/assets' )));
 app.use(noCatch())
 app.use(session({
     secret:uuidv4(),
@@ -27,7 +26,7 @@ app.use(session({
 }));
 app.use('/route',routerV);
 //home route
-app.get('/',(req,res) => {
+app.get('/login',(req,res) => {
     if(req.session.user){
         res.redirect('/route/dashboard')
     }else{
